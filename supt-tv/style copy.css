@@ -1,0 +1,229 @@
+@font-face {
+	font-family: 'Campton Medium';
+	src: url(assets/fonts/Rene%20Bieder%20-%20Campton-Medium.otf) ;
+}
+@font-face {
+	font-family: 'Campton Light';
+	src: url(assets/fonts/Rene%20Bieder%20-%20Campton-Light.otf) ;
+}
+/*=================================================================================
+CSS Reset
+==================================================================================*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+strong {font-weight: bold;}
+
+
+
+
+
+
+
+/*=================================================================================
+Structure styles
+==================================================================================*/
+body {
+	font-family: "Campton Light";
+}
+#wrapper {
+	width: calc(100% - 1055px);
+}
+#header {
+	background: linear-gradient(to bottom, #dfe6e2,#f6f9fb 50%,#f6f9fb 55%, #dfe6e2);
+	height: 80px;
+}
+#techNews {
+
+}
+#calendar {
+
+}
+#sidebar {
+	background-color: #0d4834;
+	position: fixed;
+	right: 0;
+	width: 1025px;
+	color: #dae1e7;
+	bottom: 94px;
+	top: 0;
+
+}
+#footer {
+	background-color: #0d4834;
+	height: 95px;
+	color: #dae1e7;
+	font-size: .6em;
+	line-height: 1.2em;
+	padding: 10px 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	right: 0;
+}
+/*=================================================================================
+Heading Styles
+==================================================================================*/
+h1,h2,h3,h4 {
+	font-family:'Montserrat',sans-serif;
+	color: #0d4834;
+}
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 34px;
+}
+/*=================================================================================
+Slider Styles
+==================================================================================*/
+#techNews .slide {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	height: 46vh;
+}
+#techNews .slide .slide-text {
+	display: block;
+	color: #000;
+	position: absolute;
+	bottom: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	width: 14%;
+	height: auto;
+	background-color: #ccd5df;
+	background-color: rgba(204,213,223,0.9);
+}
+#techNews .slide h2 {
+	margin-bottom: 10px;
+}
+/*=================================================================================
+Directory Styles
+==================================================================================*/
+#sidebar {display: flex;flex-wrap: wrap;padding: 25px 0 0 30px;}
+#sidebar .personalvCard {
+	width: 25%;
+}
+#sidebar .personalvCard img {
+	width: 50px;
+	float: left;
+	margin-right: 10px;
+}
+#sidebar .name {
+	font-size: 26px;
+}
+#sidebar .title {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+#sidebar .schedule {
+	clear: both;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+/*=================================================================================
+Calendar Styles
+==================================================================================*/
+#calendar {
+	padding: 20px 0 0 20px;
+	font-size: 26px;
+}
+#calendar h2 {
+	margin-left: 5%;
+	width: 93%;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	clear: both;
+}
+#calendar .meetingTime {
+	margin-left: 10%;
+	width: 40%;
+	float: left;
+	margin-bottom: 20px;
+}
+#calendar .meetingRoom {
+	width: 50%;
+	float: right;
+	margin-bottom: 20px;
+
+}
+/*=================================================================================
+Scrolling Marquee
+==================================================================================*/
+#marquee {
+ height: 95px;
+ position: relative;
+ width: 260%;
+}
+#marquee h3 {
+ font-size: 8em;
+ display: inline;
+ color: red;
+ float: left;
+ margin: 0;
+ line-height: 95px;
+
+
+ /*-moz-transform:translateX(100%); */
+ -webkit-transform:translateX(100%);
+ transform:translateX(100%);
+
+/* -moz-animation: marquee 25s linear infinite; */
+ -webkit-animation: marquee 30s linear infinite;
+ animation: marquee 30s linear infinite;
+
+}
+/* Move it (define the animation)*/
+/*
+@-moz-keyframes marquee {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+*/
+@-webkit-keyframes marquee {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes marquee {
+ 0%   {
+/* -moz-transform: translateX(100%); */
+ -webkit-transform: translateX(100%);
+ transform: translateX(100%);
+ }
+ 100% {
+/* -moz-transform: translateX(-100%); */
+ -webkit-transform: translateX(-100%);
+ transform: translateX(-100%);
+ }
+}
