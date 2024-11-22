@@ -9,60 +9,89 @@ CSS Reset
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-strong {font-weight: bold;}
+
+strong {
+	font-weight: bold;
+}
+
 p {
 	margin: 10px 0 10px 0;
 }
+
 /*=================================================================================
 Fonts
 ==================================================================================*/
 @font-face {
 	font-family: 'Campton Medium';
-	src: url(assets/fonts/Rene%20Bieder%20-%20Campton-Medium.otf) ;
+	src: url(assets/fonts/Rene%20Bieder%20-%20Campton-Medium.otf);
 }
+
 @font-face {
 	font-family: 'Campton Light';
-	src: url(assets/fonts/Rene%20Bieder%20-%20Campton-Light.otf) ;
+	src: url(assets/fonts/Rene%20Bieder%20-%20Campton-Light.otf);
 }
+
 /*=================================================================================
 Structure styles
 ==================================================================================*/
 body {
 	font-family: "Campton Light";
 }
+
 .mainHeader {
-	background: linear-gradient(to bottom,#dce3e8,#f6f9fb 50%,#f6f9fb 55%,#dbe2e8);
+	background: linear-gradient(to bottom, #dce3e8, #f6f9fb 50%, #f6f9fb 55%, #dbe2e8);
 	height: 100px;
 
 }
+
 .mainHeader img {
 	height: 90%;
 	margin-top: 10px;
 	margin-left: 20px;
 }
+
 .mainHeader .time-frame {
 	position: absolute;
 	right: 50px;
@@ -70,52 +99,64 @@ body {
 	text-align: right;
 	font-size: 26px;
 }
+
 #time {
 	position: absolute;
 	right: 0;
 }
+
 .container {
 	display: grid;
 	grid-template-columns: 60% 40%;
 }
-.leftColumn{
-	padding-left:20px;
+
+.leftColumn {
+	padding-left: 20px;
 }
+
 .websiteNews {
 	height: 30vh;
 	background-color: #f6f9fb;
 	padding: 0 15px 0 15px;
 }
+
 .slick-slide {
 	overflow: hidden;
 }
+
 .slick-slide img {
 	margin: 0 auto;
 	display: block;
 	max-width: 100%;
 }
+
 .slick-slide ul {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
+
 .slide ul li img {
 	margin-top: 20px;
 	width: 10px;
 	margin-right: 10px;
 	display: inline;
 }
+
 .slick-slide h2 {
 	margin-top: 20px;
 	margin-bottom: 0px;
 	font-size: 50px;
 }
+
 .slick-slide img {
-	margin-top:20px;
+	margin-top: 20px;
 }
+
 .meetingTimes {
 	margin-top: 60px;
 	padding: 0 15px;
 }
+
 .meetingTimes h1 {
 	font-size: 80px;
 	font-weight: 700;
@@ -123,16 +164,19 @@ body {
 	text-decoration: underline;
 	margin: 100px 0 100px 0;
 }
+
 .meetingTimes h2 {
 	margin-top: 30px;
 	font-size: 80px;
 	font-weight: 700;
 	border-top: 2px solid #000;
 }
-.meetingTimes h2:first-of-type{
+
+.meetingTimes h2:first-of-type {
 	border-top: none;
 	margin-top: 80px;
 }
+
 .meetingInfo {
 	padding-top: 30px;
 	display: grid;
@@ -140,40 +184,47 @@ body {
 	font-size: 40px;
 	font-weight: 700;
 }
+
 .directory {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-    gap: 5%;
-    grid-auto-columns: 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5%;
+	grid-auto-columns: 1fr;
 	margin-top: 25px;
 	padding-right: 2%;
 }
+
 .directory .personalvCard {
 	text-align: center;
 	display: grid;
 	grid-template-columns: 30% 70%;
 }
-.directory .personalvCard .name{
+
+.directory .personalvCard .name {
 	font-size: 38px;
 	font-weight: bold;
 }
-.directory .personalvCard .title{
+
+.directory .personalvCard .title {
 	font-style: italic;
 	font-size: 27px;
 	margin-top: 10px;
 	font-weight: bold;
 	padding-left: 5px;
 }
-.directory .personalvCard .room_number{
-		font-style: italic;
-		font-size: 20px;
-		margin-top: 10px;
-		font-weight: bold;
-		padding-left: 5px;
-	}
+
+.directory .personalvCard .room_number {
+	font-style: italic;
+	font-size: 20px;
+	margin-top: 10px;
+	font-weight: bold;
+	padding-left: 5px;
+}
+
 .directory .personalvCard .staff-member-photo {
 	max-width: 120px;
 }
+
 .read-more p {
 	margin: 20px 0 20px 0;
 	font-size: 25px;
