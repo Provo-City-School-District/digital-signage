@@ -23,7 +23,6 @@
 			<section id="news">
 
 				<?php
-
 				error_reporting(E_ALL);
 				ini_set('display_errors', 1);
 
@@ -38,27 +37,30 @@
 				libxml_use_internal_errors(true); // Suppress XML parsing errors
 
 				// Fetch the RSS feed
-				$rssContent = file_get_contents('https://provo.edu/category/news/feed/');
+				$rssContent = @file_get_contents('https://provo.edu/category/news/feed/');
 
-				// Clean the RSS feed using Tidy
-				$tidy = new tidy();
-				$config = array(
-					'input-xml' => true,
-					'output-xml' => true,
-					'wrap' => 200
-				);
-				$tidy->parseString($rssContent, $config, 'utf8');
-				$tidy->cleanRepair();
+				if ($rssContent === false) {
+					// Log detailed error message
+					$error = error_get_last();
+					echo "Error: Unable to fetch RSS feed. Details: " . $error['message'];
+				} else {
+					// Clean the RSS feed using Tidy
+					$tidy = new tidy();
+					$config = array(
+						'input-xml' => true,
+						'output-xml' => true,
+						'wrap' => 200
+					);
+					$tidy->parseString($rssContent, $config, 'utf8');
+					$tidy->cleanRepair();
 
-				// Load the cleaned RSS feed into DOMDocument
-				$rss->loadXML($tidy);
-
-				// Check for XML errors
-				if (libxml_get_errors()) {
-					foreach (libxml_get_errors() as $error) {
-						echo "XML Error: ", $error->message;
+					// Load the cleaned RSS feed into DOMDocument
+					if ($rss->loadXML($tidy)) {
+						// Process the RSS feed
+					} else {
+						// Handle the error if the XML cannot be loaded
+						echo "Error: Unable to load RSS feed.";
 					}
-					libxml_clear_errors();
 				}
 
 				$feed = array();
