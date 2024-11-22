@@ -1,0 +1,126 @@
+/*=================================================================================
+Structure styles
+==================================================================================*/
+body {
+	font-family: "Campton Light";
+	font-size: 100%;
+}
+#wrapper {
+	width: 100%;
+}
+#header {
+	background: linear-gradient(to bottom,#dce3e8,#f6f9fb 50%,#f6f9fb 55%,#dbe2e8);
+	height: 200px;
+}
+#header img {
+	height: 90%;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+#header .time-frame {
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	text-align: right;
+	font-size: 2.6em;
+}
+#time {
+	position: absolute;
+	right: 0;
+}
+#news {
+	top: 100px;
+	width: 47%;
+	height: 80vh;
+	background-color: #f6f9fb;
+	padding: 0 15px 0 15px;
+	overflow: hidden;
+
+}
+.slick-slide {
+	overflow: hidden;
+}
+.slick-slide img {
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+}
+.slick-slide ul {
+	margin-bottom: 20px;
+}
+.slick-slide ul li {
+	margin: 0 15px 0 0;
+	display: inline-block;
+
+}
+.slide ul li img {
+	width: 10px;
+	display: inline;
+
+}
+.slick-slide h2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#read-more {
+	position: fixed;
+	bottom: 0;
+	width: 47%;
+	height: 7vh;
+	text-align: center;
+	font-size: 2.6em;
+	color: #21395a;
+}
+#sidebar {
+
+	right: 0;
+	font-size: 2.6em;
+	width: 50%;
+	color: #21395a;
+	bottom: 0;
+	top: 100px;
+	z-index: 550;
+	padding-top: 30px;
+
+}
+#sidebar h1 {
+	position: absolute;
+
+}
+#sidebar h2 {
+	margin-top: 20px
+}
+#sidebar .meetingTime {
+	width: 45%;
+	float: left;
+	margin: 20px 0 30px 40px;
+
+}
+#sidebar .meetingRoom {
+	width: 50%;
+	float: left;
+	margin: 20px 0 30px 0;
+
+}
+#sidebar{
+
+}
+#calendar {
+
+}
+
+/*=================================================================================
+Heading Styles
+==================================================================================*/
+h1,h2,h3,h4 {
+	font-family:'Montserrat',sans-serif;
+	color: #21395a;
+
+}
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2em;
+}
