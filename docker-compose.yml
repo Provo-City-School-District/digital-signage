@@ -1,0 +1,17 @@
+services:
+  digital-sigange-web:
+    container_name: digital-signage-web
+    build:
+      context: .
+      dockerfile: ./php.Dockerfile
+    restart: always
+    ports:
+      - "8050:80"
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - digital-signage-network
+networks:
+  digital-signage-network:
+volumes:
+  src:
