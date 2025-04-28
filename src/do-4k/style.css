@@ -188,7 +188,7 @@ body {
 .directory {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 5%;
+	gap: 3.5%;
 	grid-auto-columns: 1fr;
 	margin-top: 25px;
 	padding-right: 2%;
